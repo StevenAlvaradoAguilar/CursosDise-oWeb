@@ -15,7 +15,7 @@ export const SimpleForm = () => {
         setFormState({
             //desestructurar 
             ...formState,
-            [ name ]: value
+            [ name ]: value // laves computadas
         });
     }
 
@@ -27,6 +27,7 @@ export const SimpleForm = () => {
         //console.log('useEffect called')
     }, [] );
 
+    // Un useEffect separado para cada distinta funcionalidad
     useEffect( () => {
         //console.log('formState changed')
     }, [formState] );
